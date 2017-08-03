@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.varunarl.hello.exception.HelloException;
-import com.varunarl.hello.exception.ProductNotAvailableException;
-import com.varunarl.hello.exception.ProductSaveException;
 
 @ControllerAdvice
 public class RESTExceptionHandler {
@@ -18,16 +16,4 @@ public class RESTExceptionHandler {
         return new ResponseEntity<Response>(res, HttpStatus.BAD_REQUEST);
     }
     
-    @ExceptionHandler(ProductNotAvailableException.class)
-    public ResponseEntity<Response> productNotFoundException(Exception ex){
-        Response res = new Response(ex.getMessage());
-        return new ResponseEntity<Response>(res , HttpStatus.NOT_FOUND);
-    }
-    
-    @ExceptionHandler(ProductSaveException.class)
-    public ResponseEntity<Response> productSaveException(Exception ex){
-        Response res = new Response(ex.getMessage());
-        return new ResponseEntity<Response>(res , HttpStatus.INTERNAL_SERVER_ERROR);
-        
-    }
 }
