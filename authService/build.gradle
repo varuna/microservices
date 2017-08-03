@@ -4,7 +4,7 @@ jar {
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web:1.5.4.RELEASE"){
+	compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE"){
 		exclude module: "spring-boot-starter-tomcat"
 	}
 	compile "com.amazonaws:aws-java-sdk-dynamodb:1.11.15"
@@ -12,6 +12,8 @@ dependencies {
 	compile "com.github.derjust:spring-data-dynamodb:4.5.0"
 	compile "org.springframework.boot:spring-boot-starter-jetty"
 	compile "org.springframework.boot:spring-boot-starter-actuator"
+	compile "org.springframework.boot:spring-boot-starter-security"
+	compile "org.springframework.security.oauth:spring-security-oauth2"
 	
 	testCompile "junit:junit"
 	testCompile 'org.springframework.boot:spring-boot-starter-test'

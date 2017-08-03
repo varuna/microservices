@@ -5,6 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 @EnableScan
 public interface UserRepository extends CrudRepository<User, String> {
-
-    
+    User findOneByUsername(String username);
 }
