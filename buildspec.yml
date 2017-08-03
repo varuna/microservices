@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - apt-get update -y
-      - apt-get install oracle-java8-installer
       - apt-get install -y gradle
+      - java -version
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
