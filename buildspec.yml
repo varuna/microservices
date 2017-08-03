@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - apt-get update -y
+      - apt-get install oracle-java8-installer
       - apt-get install -y gradle
   pre_build:
     commands:
@@ -15,9 +16,3 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - authService/build/libs/authService-0.1.0.jar
-    - productService/build/libs/productService-0.1.0.jar
-    - helloWorldService/build/libs/helloworld-0.1.0.jar
-  discard-paths: yes
