@@ -12,8 +12,8 @@ phases:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - echo Build started on `date`
-      - gradle build
+      - echo Build started
+      - gradle build --stacktrace --info
   post_build:
     commands:
       - echo Build completed on `date`
