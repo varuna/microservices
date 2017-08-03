@@ -20,8 +20,9 @@ import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DeleteTableRequest;
 import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
 import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
-import com.varunarl.hello.repos.dynamodb.Product;
-import com.varunarl.hello.repos.dynamodb.ProductRespository;
+import com.varunarl.auth.Application;
+import com.varunarl.auth.repos.dynamodb.Product;
+import com.varunarl.auth.repos.dynamodb.ProductRespository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)

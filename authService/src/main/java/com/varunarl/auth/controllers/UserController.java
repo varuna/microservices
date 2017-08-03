@@ -1,4 +1,4 @@
-package com.varunarl.hello.controllers;
+package com.varunarl.auth.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.varunarl.hello.repos.dynamodb.User;
-import com.varunarl.hello.repos.dynamodb.UserRepository;
+import com.varunarl.auth.repos.dynamodb.User;
+import com.varunarl.auth.repos.dynamodb.UserRepository;
 
 @RestController
 public class UserController {

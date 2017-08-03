@@ -1,11 +1,11 @@
-package com.varunarl.hello.services;
+package com.varunarl.auth.services;
 
 import java.util.List;
 
-import com.varunarl.hello.exception.ProductDeleteException;
-import com.varunarl.hello.exception.ProductNotAvailableException;
-import com.varunarl.hello.exception.ProductSaveException;
-import com.varunarl.hello.repos.dynamodb.Product;
+import com.varunarl.auth.exception.ProductDeleteException;
+import com.varunarl.auth.exception.ProductNotAvailableException;
+import com.varunarl.auth.exception.ProductSaveException;
+import com.varunarl.auth.repos.dynamodb.Product;
 
 public interface ProductService {
 

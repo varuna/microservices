@@ -1,4 +1,4 @@
-package com.varunarl.hello.handlers;
+package com.varunarl.auth.handlers;
 
 public class Response {
     private String responseMessage;

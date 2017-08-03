@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.varunarl.hello.handlers.LoginResponse;
-import com.varunarl.hello.services.HelloWorldService;
-import com.varunarl.hello.services.HelloWorldServiceImpl;
+import com.varunarl.auth.handlers.LoginResponse;
+import com.varunarl.auth.services.HelloWorldService;
+import com.varunarl.auth.services.HelloWorldServiceImpl;
 
 @RunWith(SpringRunner.class)
 public class HelloWorldServiceTest {

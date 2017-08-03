@@ -1,4 +1,4 @@
-package com.varunarl.hello.services;
+package com.varunarl.auth.services;
 
 import java.util.UUID;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.varunarl.hello.handlers.LoginResponse;
+import com.varunarl.auth.handlers.LoginResponse;
 
 @Service
 public class HelloWorldServiceImpl implements HelloWorldService {

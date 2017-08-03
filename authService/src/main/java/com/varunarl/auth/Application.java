@@ -1,4 +1,4 @@
-package com.varunarl.hello;
+package com.varunarl.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

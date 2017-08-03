@@ -1,15 +1,15 @@
-package com.varunarl.hello.services;
+package com.varunarl.auth.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.varunarl.hello.exception.ProductDeleteException;
-import com.varunarl.hello.exception.ProductNotAvailableException;
-import com.varunarl.hello.exception.ProductSaveException;
-import com.varunarl.hello.repos.dynamodb.Product;
-import com.varunarl.hello.repos.dynamodb.ProductRespository;
+import com.varunarl.auth.exception.ProductDeleteException;
+import com.varunarl.auth.exception.ProductNotAvailableException;
+import com.varunarl.auth.exception.ProductSaveException;
+import com.varunarl.auth.repos.dynamodb.Product;
+import com.varunarl.auth.repos.dynamodb.ProductRespository;
 
 @Service("DynamoDBService")
 public class ProductServiceImpl implements ProductService {

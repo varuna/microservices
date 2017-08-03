@@ -1,12 +1,12 @@
-package com.varunarl.hello.controllers;
+package com.varunarl.auth.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.varunarl.hello.exception.HelloException;
-import com.varunarl.hello.handlers.Response;
+import com.varunarl.auth.exception.HelloException;
+import com.varunarl.auth.handlers.Response;
 
 @RestController
 public class HelloWorldController {

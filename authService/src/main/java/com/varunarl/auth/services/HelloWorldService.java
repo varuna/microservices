@@ -1,8 +1,8 @@
-package com.varunarl.hello.services;
+package com.varunarl.auth.services;
 
 import org.springframework.http.ResponseEntity;
 
-import com.varunarl.hello.handlers.LoginResponse;
+import com.varunarl.auth.handlers.LoginResponse;
 
 public interface HelloWorldService {
     

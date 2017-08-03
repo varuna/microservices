@@ -1,4 +1,4 @@
-package com.varunarl.hello.controllers;
+package com.varunarl.auth.controllers;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.varunarl.hello.exception.ProductNotAvailableException;
-import com.varunarl.hello.exception.ProductSaveException;
-import com.varunarl.hello.handlers.Response;
-import com.varunarl.hello.repos.dynamodb.Product;
-import com.varunarl.hello.services.ProductService;
+import com.varunarl.auth.exception.ProductNotAvailableException;
+import com.varunarl.auth.exception.ProductSaveException;
+import com.varunarl.auth.handlers.Response;
+import com.varunarl.auth.repos.dynamodb.Product;
+import com.varunarl.auth.services.ProductService;
 
 @RestController
 public class ProductController {

@@ -1,4 +1,4 @@
-package com.varunarl.hello;
+package com.varunarl.auth;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;

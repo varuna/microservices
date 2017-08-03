@@ -1,13 +1,13 @@
-package com.varunarl.hello.handlers;
+package com.varunarl.auth.handlers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.varunarl.hello.exception.HelloException;
-import com.varunarl.hello.exception.ProductNotAvailableException;
-import com.varunarl.hello.exception.ProductSaveException;
+import com.varunarl.auth.exception.HelloException;
+import com.varunarl.auth.exception.ProductNotAvailableException;
+import com.varunarl.auth.exception.ProductSaveException;
 
 @ControllerAdvice
 public class RESTExceptionHandler {

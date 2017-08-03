@@ -1,4 +1,4 @@
-package com.varunarl.hello.repos.dynamodb;
+package com.varunarl.auth.repos.dynamodb;
 
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;

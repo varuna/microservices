@@ -1,4 +1,4 @@
-package com.varunarl.hello.exception;
+package com.varunarl.auth.exception;
 
 import java.util.HashMap;
 import java.util.Map;
