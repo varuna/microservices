@@ -12,7 +12,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.varunarl.hello.repos.dynamodb")
+@EnableDynamoDBRepositories(basePackages = "com.varunarl.auth.repos.dynamodb")
 public class ApplicationConfiguraton {
     
     @Value("${amazon.dynamodb.endpoint}")
