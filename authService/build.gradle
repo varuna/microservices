@@ -1,0 +1,19 @@
+jar {
+	baseName = 'authService'
+	version = '0.1.0'
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web:1.5.4.RELEASE"){
+		exclude module: "spring-boot-starter-tomcat"
+	}
+	compile "com.amazonaws:aws-java-sdk-dynamodb:1.11.15"
+	compile "org.springframework.data:spring-data-releasetrain:1.4.6.RELEASE"
+	compile "com.github.derjust:spring-data-dynamodb:4.5.0"
+	compile "org.springframework.boot:spring-boot-starter-jetty"
+	compile "org.springframework.boot:spring-boot-starter-actuator"
+	
+	testCompile "junit:junit"
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	testCompile 'org.mockito:mockito-core:2.8.47'
+}
