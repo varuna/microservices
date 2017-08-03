@@ -5,7 +5,7 @@ phases:
     commands:
       - apt-get update -y
       - apt-get install -y gradle
-      - java -version
+      - apt-get install openjdk-8-jdk
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
