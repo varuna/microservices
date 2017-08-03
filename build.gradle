@@ -1,6 +1,6 @@
 buildscript {
 	repositories{
-		jcenter()
+		mavenCentral()
 	}
 	dependencies{
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
@@ -21,7 +21,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories{
-	jcenter()
+	mavenCentral()
 	maven{
 		url 'https://s3-us-west-2.amazonaws.com/dynamodb-local/release'
 	}
@@ -36,5 +36,8 @@ dependencies {
 	compile "com.github.derjust:spring-data-dynamodb:4.5.0"
 	compile "org.springframework.boot:spring-boot-starter-jetty"
 	compile "org.springframework.boot:spring-boot-starter-actuator"
+	
 	testCompile "junit:junit"
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	testCompile 'org.mockito:mockito-core:2.8.47'
 }

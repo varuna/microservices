@@ -10,31 +10,50 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.varunarl.hello.exception.ProductNotAvailableException;
+import com.varunarl.hello.handlers.Response;
 import com.varunarl.hello.repos.dynamodb.Product;
-import com.varunarl.hello.services.DynamoDBService;
+import com.varunarl.hello.services.ProductService;
 
 @RestController
 public class ProductController {
-    
-    @Autowired
-    private DynamoDBService dbService;
 
-    @RequestMapping(value="product/", method=RequestMethod.GET)
-    public ResponseEntity<List<Product>> product(){
+    @Autowired
+    private ProductService dbService;
+
+    @RequestMapping(value = "product/", method = RequestMethod.GET)
+    public ResponseEntity<List<Product>> findAll() {
         List<Product> allProducts = dbService.findAllProducts();
-        if (allProducts.isEmpty()){
+        if (allProducts.isEmpty()) {
             return new ResponseEntity<List<Product>>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<List<Product>>(allProducts, HttpStatus.OK);
     }
-    
-//    @RequestMapping(value="product/{id}", method=RequestMethod.GET)
-//    public ResponseEntity<Product> product(@PathVariable("id") long productId){
-//        Product p = dbService.find(productId);
-//        if ( p == null){
-//            return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
-//        }
-//        return new ResponseEntity<Product>(p, HttpStatus.NO_CONTENT);
-//    }
-    
+
+    @RequestMapping(value = "product/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Product> findOne(@PathVariable("id") String productId) {
+        Product p = dbService.find(productId);
+        if (p == null) {
+            return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<Product>(p, HttpStatus.NO_CONTENT);
+    }
+
+    @RequestMapping(value = "product/", method = RequestMethod.PUT)
+    public ResponseEntity<Response> save(Product product) {
+        String id = dbService.save(product);
+        Response response = new Response("Product " + id + " is created.");
+        return new ResponseEntity<Response>(response, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "product/", method = RequestMethod.POST, consumes = "application/json")
+    public ResponseEntity<Response> update(Product product) throws ProductNotAvailableException {
+        boolean isUpdateSuccessful = dbService.update(product);
+        if (isUpdateSuccessful) {
+            Response response = new Response("Product " + product.getId() + " is updated.");
+            return new ResponseEntity<Response>(response, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Response>(new Response("Cannot update "+product.getId()), HttpStatus.NOT_MODIFIED);
+    }
+
 }
