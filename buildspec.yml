@@ -20,9 +20,9 @@ phases:
     commands:
       - echo Build completed
       - ls -al
-  artifacts:
-    files:
-      - authService/build/libs/authService-0.1.0.jar
-      - authService/application.properties
-      - appspec.yml
-    discard-paths: yes
+artifacts:
+  files:
+    - authService/build/libs/authService-0.1.0.jar
+    - authService/application.properties
+    - appspec.yml
+  discard-paths: yes
