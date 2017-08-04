@@ -1,0 +1,12 @@
+
+#%RAML 1.0
+title: ProductService
+version: v1
+baseUri: http://{hostName}:{port}
+baseUriParameters:
+	hostName:
+		description: The host url of the API
+	port:
+		description: The application running port. By default it is 80
+mediaTypes: application/json
+
