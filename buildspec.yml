@@ -18,4 +18,5 @@ phases:
       - ./gradlew build -x test --stacktrace --info
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed
+      - ls -al
