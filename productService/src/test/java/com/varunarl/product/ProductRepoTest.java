@@ -65,14 +65,4 @@ public class ProductRepoTest {
 
         assertTrue("Not empty", result.size() > 0);
     }
-
-    @After
-    public void after() {
-        DeleteTableRequest dRequestProductTable = dbMapper.generateDeleteTableRequest(Product.class);
-        db.deleteTable(dRequestProductTable);
-    }
-
-    public void testUserTable() {
-
-    }
 }
