@@ -1,0 +1,7 @@
+
+
+Version 0.1
+os: linux
+files:
+	- source: ./authService-0.1.0.jar
+	- destination: /tmp
