@@ -29,4 +29,4 @@ artifacts:
     - helloWorldService/build/libs/helloworld-0.1.0.jar
     - helloWorldService/application.properties
     - appspec.yml
-  discard-paths: yes
+  discard-paths: no
