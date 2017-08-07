@@ -24,5 +24,9 @@ artifacts:
   files:
     - authService/build/libs/authService-0.1.0.jar
     - authService/application.properties
+    - productService/build/libs/productService-0.1.0.jar
+    - productService/application.properties
+    - helloWorldService/build/libs/helloworld-0.1.0.jar
+    - helloWorldService/application.properties
     - appspec.yml
   discard-paths: yes

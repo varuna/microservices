@@ -1,5 +1,5 @@
 jar {
-	baseName = 'helloworld'
+	baseName = 'productService'
 	version = '0.1.0'
 }
 
