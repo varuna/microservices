@@ -75,7 +75,7 @@ public class User implements UserDetails {
     @DynamoDBAttribute
     @Override
     public boolean isEnabled() {
-        return isEnabled;
+        return true;
     }
 
     public void setPassword(String password) {

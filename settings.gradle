@@ -1,1 +1,1 @@
-include ':authService',':productService',':helloWorldService' 
+include ':authService',':productService',':helloWorldService',':serviceDiscovery', ':zuulApp' 

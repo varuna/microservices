@@ -1,0 +1,67 @@
+{
+	"User": [
+		{
+			"PutRequest": {
+				"Item": {
+					"id": {
+						"S": "user1"
+					},
+					"username": {
+						"S": "varuna"
+					},
+					"name": {
+						"S": "Varuna Lekamwasam"
+					},
+					"password": {
+						"S": "$2a$10$D4OLKI6yy68crm.3imC9X.P2xqKHs5TloWUcr6z5XdOqnTrAK84ri"
+					},
+					"isEnabled": {
+						"N": "1"
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"id": {
+						"S": "user2"
+					},
+					"username": {
+						"S": "sujeewa"
+					},
+					"name": {
+						"S": "Sujeewa Dharmasena"
+					},
+					"password": {
+						"S": "$2a$10$D4OLKI6yy68crm.3imC9X.P2xqKHs5TloWUcr6z5XdOqnTrAK84ri"
+					},
+					"isEnabled": {
+						"N": "1"
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"id": {
+						"S": "user3"
+					},
+					"username": {
+						"S": "rushan"
+					},
+					"name": {
+						"S": "Rushan Priyadharshana"
+					},
+					"password": {
+						"S": "$2a$10$D4OLKI6yy68crm.3imC9X.P2xqKHs5TloWUcr6z5XdOqnTrAK84ri"
+					},
+					"isEnabled": {
+						"N": "1"
+					}
+				}
+			}
+		}
+	]
+}

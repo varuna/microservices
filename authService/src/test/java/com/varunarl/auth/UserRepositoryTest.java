@@ -1,6 +1,8 @@
 package com.varunarl.auth;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,6 +53,20 @@ public class UserRepositoryTest {
         varuna = repository.save(varuna);
         assertFalse(varuna.getId().isEmpty());
         System.out.println(varuna.getPassword());
+    }
+    
+    @Test
+    public void deleteUserTest(){
+        User varuna = repository.findOneByUsername("Varuna");
+        User sujeewa = repository.findOneByUsername("Sujeewa");
+        assertNotNull(varuna);
+        assertNotNull(sujeewa);
+        repository.delete(varuna.getId());
+        repository.delete(sujeewa.getId());
+        varuna = repository.findOneByUsername("Varuna");
+        sujeewa = repository.findOneByUsername("Sujeewa");
+        assertNull(varuna);
+        assertNull(sujeewa);
     }
 
     @Test
