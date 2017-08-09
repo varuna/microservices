@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.varunarl.hello.exception.HelloException;
 import com.varunarl.hello.handlers.Response;
 
+@Produces("application/json")
 @RestController
 public class HelloWorldController {
 
@@ -24,7 +25,7 @@ public class HelloWorldController {
     @RequestMapping("hello")
     public ResponseEntity<Response> hello(String name) throws Exception {
         String role = "User";
-        if (name.isEmpty()){
+        if (name != null && name.isEmpty()){
             throw new HelloException(1,1);
         }else if ("Varuna".equals(name)){
             role = "admin";

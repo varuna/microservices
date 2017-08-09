@@ -22,6 +22,7 @@ public class User implements UserDetails {
     private String id;
     private String username;
     private String password;
+    private String role;
     private boolean isEnabled;
 
     @DynamoDBHashKey
@@ -85,5 +86,16 @@ public class User implements UserDetails {
     public void setEnabled(boolean isEnabled) {
         this.isEnabled = isEnabled;
     }
+
+    @DynamoDBAttribute
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+    
+    
 
 }

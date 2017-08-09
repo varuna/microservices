@@ -22,11 +22,11 @@ phases:
       - ls -al
 artifacts:
   files:
-    - authService/build/libs/authService-0.1.0.jar
-    - authService/application.properties
-    - productService/build/libs/productService-0.1.0.jar
-    - productService/application.properties
-    - helloWorldService/build/libs/helloworld-0.1.0.jar
-    - helloWorldService/application.properties
-    - appspec.yml
+    - authService/build/libs/authService-1.0.0-SNAPSHOT.jar
+    - productService/build/libs/productService-1.0.0-SNAPSHOT.jar
+    - helloWorldService/build/libs/helloworld-1.0.0-SNAPSHOT.jar
+    - kafkaConsumer/build/libs/kafkaConsumer-1.0.0-SNAPSHOT.jar
+    - kafkaProducer/build/libs/kafkaProducer-1.0.0-SNAPSHOT.jar
+    - serviceDiscovery/build/libs/eureka-1.0.0-SNAPSHOT.jar
+    - zuulApp/build/libs/zuul-1.0.0-SNAPSHOT.jar
   discard-paths: no

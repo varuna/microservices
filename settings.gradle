@@ -1,1 +1,1 @@
-include ':authService',':productService',':helloWorldService',':serviceDiscovery', ':zuulApp' 
+include ':authService',':productService',':helloWorldService',':serviceDiscovery', ':zuulApp', ':kafkaProducer', ':kafkaConsumer' 
