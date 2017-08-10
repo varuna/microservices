@@ -29,4 +29,5 @@ artifacts:
     - kafkaProducer/build/libs/kafkaProducer-1.0.0-SNAPSHOT.jar
     - serviceDiscovery/build/libs/eureka-1.0.0-SNAPSHOT.jar
     - zuulApp/build/libs/zuul-1.0.0-SNAPSHOT.jar
+    - Procfile
   discard-paths: yes
